@@ -1,0 +1,100 @@
+<div style="height: 60px;width: 100%;background-color: #a9e5ea;">
+    <img style="height: 60px; width: 460px; position: absolute; right: 0px;" src="recursos/imgs/H1.png">
+    <p style="position: absolute;color: #294667;margin-left: 42px;margin-top: 26px;font-size: 12px;">TÓPICO<strong>
+            1</strong></p>
+    <p style="position: absolute;color: #294667;margin-left: 112px;margin-top: 26px;font-size: 11px;width: 450px;">
+        PROCESSO DE TRABALHO EM SAÚDE</p>
+</div>
+<div class=" coluna-esquerda largura-1_1 " style="margin-left: 40px;margin-top: 20px;">
+    <p style="width: 808px;">Ao contrário dos animais que agem por instinto, o trabalho humano tem
+        sempre uma intencionalidade. Para compreender de
+        forma concreta o processo de trabalho, é pertinente conhecer os elementos básicos que o envolvem. </p>
+    <p>Clique em cada elemento para conhecer sua intencionalidade.</p>
+    <img style="width: 363px;height: 237px;margin-left: 222px;" src="recursos/imgs/img-pag-8.svg">
+</div>
+<div>
+    <div id="botao_1" style="position: absolute;width: 147px;height: 100px;top: 188px;left: 261px;">
+    </div>
+    <div id="botao_2" style="position: absolute;width: 147px;height: 100px;top: 188px;left: 478px;">
+    </div>
+    <div id="botao_3" style="position: absolute;width: 147px;height: 100px;top: 328px;left: 261px;">
+    </div>
+    <div id="botao_4" style="position: absolute;width: 147px;height: 100px;top: 328px;left: 478px;">
+    </div>
+    <div>
+        <div id="janela_1"
+            style="position: absolute;top: 140px;left: 160px;width: 562px;height: 179px;background: #1B8992 0% 0% no-repeat padding-box;border-radius: 10px;">
+            <p style="margin-top: 46px;margin-left: 187px;font-size: 14px;color: #FFFFFF;">A FINALIDADE DO TRABALHO</p>
+            <p style="color: white;font-size: 12px;margin-top: 28px;margin-left: 32px;width: 390px;">Necessidade
+                conforme demanda.</p>
+        </div>
+        <div id="janela_2"
+            style="position: absolute;top: 140px;left: 160px;width: 562px;height: 179px;background: #6DAFCC 0% 0% no-repeat padding-box;border-radius: 10px;cursor: pointer;">
+            <p style="margin-top: 54px;margin-left: 200px;font-size: 14px;color: #FFFFFF;">O OBJETO DE TRABALHO</p>
+            <p style="color: white;font-size: 12px;margin-top: 20px;margin-left: 32px;width: 499px;">Corresponde à
+                matéria que
+                será transformada por meio da ação do trabalhador e, no final do processo, estará modificada
+                (JACONDINO, 2019; MASCARENHAS, 2019).</p>
+        </div>
+        <div id="janela_3"
+            style="position: absolute;top: 140px;left: 160px;width: 562px;height: 179px;background: #F4BB2A 0% 0% no-repeat padding-box;border-radius: 10px;cursor: pointer;">
+            <p style="margin-top: 31px;margin-left: 204px;font-size: 14px;color: #FFFFFF;">A FORÇA DE TRABALHO</p>
+            <p style="color: white;font-size: 12px;margin-top: 20px;margin-left: 32px;width: 499px;">Refere-se a todos
+                que realizam o trabalho e advém da intenção de transformar a natureza em algo com significado
+                especial.</p>
+            <p style="color: white;font-size: 12px;margin-left: 32px;width: 499px;">Pode ser
+                concomitantemente o produtor e o consumidor daquele trabalho, assim como produzir bem ou serviço para
+                outra pessoa consumir (MARX, 2012).</p>
+        </div>
+        <div id="janela_4"
+            style="position: absolute;top: 140px;left: 160px;width: 562px;height: 205px;background: #108141 0% 0% no-repeat padding-box;border-radius: 10px;cursor: pointer;">
+            <p style="margin-top: 18px;margin-left: 171px;font-size: 14px;color: #FFFFFF;">OS INSTRUMENTOS DE TRABALHO
+            </p>
+            <p style="color: white;font-size: 12px;margin-top: 20px;margin-left: 32px;width: 499px;">Refere-se aos meios
+                usados pelo trabalhador, no sentido de realizar o seu ofício e transformar o objeto de trabalho
+                (MARX, 2012). </p>
+            <p style="color: white;font-size: 12px;margin-left: 32px;width: 499px;">Alguns autores
+                entendem que os instrumentos de trabalho correspondem, por um lado, a equipamentos,
+                máquinas, materiais de consumo e, por outro lado, a conhecimentos, modelos e técnicas que orientam o
+                trabalhador.</p>
+            <p style="color: white;font-size: 12px;margin-left: 32px;width: 499px;">Salienta-se também
+                que o produto do trabalho de um trabalhador pode ser o instrumento de trabalho de outra pessoa ou
+                dele próprio em momentos distintos.</p>
+        </div>
+    </div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #FFA800;">
+    <div style="margin-top: -8px;display: flex;margin-left: 42px;">
+        <p style="color: white;font-size: 12px;">MÓDULO 1</p>
+        <p style="margin-left: 15px;color: white;font-size: 11px;margin-top: 12px;">O TRABALHO NA GESTÃO DA
+            ESTRATÉGIA SAÚDE DA FAMÍLIA</p>
+        <p style="margin-left: 80px;color: white;font-size: 12px;">UNIDADE 1</p>
+        <p style="margin-left: 15px;color: white;font-size: 11px;margin-top: 12px;">O PROCESSO DE TRABALHO DO GESTOR
+            DA APS/ESF</p>
+    </div>
+</footer>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        $(document).find('[id^=btn]').hide();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer');
+            $(botao).hover(() => {
+                $(document).find(`[id=btn_${index + 1}_2]`).show();
+            });
+            $(botao).mouseleave(() => {
+                $(document).find('[id^=btn]').hide();
+            });
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>
