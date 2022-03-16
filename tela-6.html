@@ -22,7 +22,9 @@
         <p>Considera-se trabalho o modo de agregar valor às coisas. Por meio dele, transformamos a matéria bruta
             disponível
             na
-            natureza (matéria-prima) em um novo elemento, ou seja, objeto ou mercadoria, potencialmente pensado para
+            natureza <strong style="width: 40px; background-color: #FAC900; display: inline;"><a
+                    id="hotWord-bt">(matéria-prima)</a></strong> em um novo elemento, ou seja, objeto ou mercadoria,
+            potencialmente pensado para
             satisfazer as
             necessidades de alguém ou de um grupo social.</p>
         <p>Portanto, o processo de trabalho é a materialização do processo de
@@ -45,3 +47,20 @@
             DA APS/ESF</p>
     </div>
 </footer>
+<div id="conteudo"
+    style="position: absolute;background-color: rgb(250, 201, 1);top: 188px;left: 52px;width: 459px;border-radius: 10px;">
+    <p style="text-align: center;">Palavra associada: Matéria bruta</p>
+    <p style="text-align: center;">Algo tirado da natureza na sua condição natural, objeto de trabalho que já passou por
+        uma transformação anterior.</p>
+</div>
+<script>
+    $(() => {
+        let conteudo = $('#conteudo').hide();
+        $('#hotWord-bt').css('cursor', 'pointer').hover(() => {
+            conteudo.fadeIn()
+        })
+        $('#hotWord-bt').mouseout(() => {
+            conteudo.fadeOut()
+        })
+    })
+</script>

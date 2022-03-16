@@ -19,7 +19,7 @@
     <p>Para Marx (2012), durante o processo de trabalho, ocorre uma transformação do objeto, a qual se dá
         pela atividade humana com auxílio do instrumento de trabalho. Nesse sentido, o objeto e os instrumentos são
         manejados
-        pela força de trabalho em um processo orientado por determinada finalidade (PIRES, 2000).</p>
+        pela <strong style="width: 40px; background-color: #FAC900; display: inline;"><a id="hotWord-bt">força de trabalho</a></strong> em um processo orientado por determinada finalidade (PIRES, 2000).</p>
     <div class="animate__animated animate__backInRight"
         style="margin-top: 40px;margin-left: 69px;display: flex;flex-direction: row;width: 632px;height: 138px;background-color: #fff2d9;border-radius: 10px;">
         <img src="recursos/imgs/dica-icon.svg" style="width: 43px;height: 46px;margin-top: 49px;margin-left: 42px;">
@@ -41,3 +41,20 @@
             DA APS/ESF</p>
     </div>
 </footer>
+<div id="conteudo"
+    style="position: absolute;background-color: rgb(250, 201, 1);top: 116px;left: 32px;width: 459px;border-radius: 10px;">
+    <p style="text-align: center;">O trabalho é movido pelo ser humano, considerado a força de trabalho, o qual se
+        relaciona com a natureza para produzir
+        algo útil à humanidade.</p>
+</div>
+<script>
+    $(() => {
+        let conteudo = $('#conteudo').hide();
+        $('#hotWord-bt').css('cursor', 'pointer').hover(() => {
+            conteudo.fadeIn()
+        })
+        $('#hotWord-bt').mouseout(() => {
+            conteudo.fadeOut()
+        })
+    })
+</script>
