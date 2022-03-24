@@ -48,41 +48,43 @@
 <div style="overflow: scroll;width: 100%;height: 100%;">
 
     <div id="click_1" style="width: 860px;height: 262px;background-color: white;">
-        <iframe id="myIframe_1" class="frame" src="../tela-1.html"></iframe>
+        <iframe id="myIframe_1"
+            src="https://onedrive.live.com/embed?cid=F2418B55FD4571E0&amp;resid=F2418B55FD4571E0%21722&amp;authkey=AKn3dWXm2N9ioAo&amp;em=2&amp;wdAr=1.7777777777777777"
+            width="476px" height="288px" frameborder="0">Este é um apresentação do <a target="_blank"
+                href="https://office.com">Microsoft Office</a> incorporado, da plataforma <a target="_blank"
+                href="https://office.com/webapps">Office</a>.</iframe>
     </div>
     <div id="click_1" style="width: 860px;height: 262px;background-color: white;">
-        <iframe id="myIframe_1" class="frame" src="../tela-2.html"></iframe>
+        <iframe id="myIframe_1" class="frame" src="../index.html#tela-1"></iframe>
     </div>
-    <div id="click_1" style="width: 860px;height: 262px;background-color: white;">
-        <iframe id="myIframe_1" class="frame" src="../tela-3.html"></iframe>
+    <div id="click_2" style="width: 860px;height: 262px;background-color: white;">
+        <iframe id="myIframe_2" class="frame" src="../index.html#tela-2"></iframe>
     </div>
-    <div id="click_1" style="width: 860px;height: 262px;background-color: white;">
-        <iframe id="myIframe_1" class="frame" src="../tela-4.html"></iframe>
+    <div id="click_3" style="width: 860px;height: 262px;background-color: white;">
+        <iframe id="myIframe_3" class="frame" src="../index.html#tela-3"></iframe>
     </div>
-    <div id="click_1" style="width: 860px;height: 262px;background-color: white;">
-        <iframe id="myIframe_1" class="frame" src="../tela-5.html"></iframe>
+    <div id="click_4" style="width: 860px;height: 262px;background-color: white;">
+        <iframe id="myIframe_4" class="frame" src="../index.html#tela-4"></iframe>
     </div>
-    <div id="click_1" style="width: 860px;height: 262px;background-color: white;">
-        <iframe id="myIframe_1" class="frame" src="../tela-7.html"></iframe>
-    </div>
-    <div id="click_1" style="width: 860px;height: 262px;background-color: white;">
-        <iframe id="myIframe_1" class="frame" src="../tela-9.html"></iframe>
-    </div>
+
+
 </div>
 
 <script>
     $(() => {
 
-         $(document).find('[id^=click]').click((elemento)=>{
-             console.log(elemento.target.id);
-         })
-
-        $("#myIframe_1").on('load', () => {
-            $('#click_1').click(() => {
-                console.log($("#myIframe_1").contents().find('body').html())
-            })
-
+        $(document).find('[id^=click]').click((elemento) => {
+            console.log(elemento.target.id);
+            console.log($(elemento).find("#myIframe_1"));
         })
+
+        // $("#myIframe_1").on('load', () => {
+        //     $('#click_1').click(() => {
+        //         console.log($("#myIframe_1").contents().find('main').find('#tela').html())
+        //         console.log($('#myIframe_1').contents());
+        //     })
+
+        // })
 
     })
 </script>
