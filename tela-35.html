@@ -20,11 +20,11 @@
     </div>
     <div>
         <div id="feedCerto"
-            style="background-color: rgb(255, 168, 0); position: absolute; top: 336px; left: 362px; width: 100px; border-radius: 10px; cursor: pointer;">
+            style="background-color: rgb(255, 168, 0); position: absolute; top: 336px; left: 362px; width: 100px; border-radius: 10px;">
             <p style="color: white;margin-left: 9px;">Muito bem!</p>
         </div>
         <div id="feedErrado"
-            style="background-color: rgb(255, 168, 0); position: absolute; top: 337px; left: 17px; width: 140px; border-radius: 10px; cursor: pointer;">
+            style="background-color: rgb(255, 168, 0); position: absolute; top: 337px; left: 17px; width: 140px; border-radius: 10px; ">
             <p style="color: white;margin-left: 9px;">Tente novamente.</p>
         </div>
     </div>
@@ -280,10 +280,11 @@
         $(document).find('[id=janela_1]').show();
 
         const empties = $(document).find('[id^=drop]');
+        $(document).find('[id^=drag]').css('cursor', 'pointer');
         let drag;
         let voltar = [];
         let positions = [];
-        let feeds = $(document).find('[id^=feed]').css('cursor', 'pointer').hide();
+        let feeds = $(document).find('[id^=feed]').hide();
 
         function apagarDragJanelas() {
             feeds.map((index, feed) => {
@@ -348,10 +349,6 @@
             empty.addEventListener("drop", dragDrop);
             voltar.push(null)
         }
-
-
-
-
 
         function fnAvancar() {
             if (contador < janelas.length) {
