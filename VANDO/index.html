@@ -21,70 +21,32 @@
 <link rel="stylesheet" href="../css/main.css">
 <link rel="stylesheet" href="../css/exercicios.css">
 <link rel="stylesheet" href="../css/modal.css">
-<!--<link rel="stylesheet" href="js/vendor/jquery-ui.min.css">-->
 <link rel="stylesheet" href="../css/telas.css">
-
-
 <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
     integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
 <script src="../js/vendor/modernizr-2.8.3.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
 <script src="../bootstrap/jquery/jquery-3.5.1.min.js"></script>
 <script src="../bootstrap/jquery/jquery-3.5.1.min.js"></script>
 <script src="../bootstrap/js/bootstrap.min.js"></script>
-<!-- Scripts -->
-<!--<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script src="js/vendor/jquery-ui.min.js" ></script>
-    <script>
-        window.jQuery || document.write('<script src="js/vendor/jquery-3.1.1.min.js"><\/script>')
-
-    </script>-->
 <script src="../js/plugins.js"></script>
 <script src="../js/main.js"></script>
 
-<div style="overflow: scroll;width: 100%;height: 100%;">
-
-    <div id="click_1" style="width: 860px;height: 262px;background-color: white;">
-        <iframe id="myIframe_1"
-            src="https://onedrive.live.com/embed?cid=F2418B55FD4571E0&amp;resid=F2418B55FD4571E0%21722&amp;authkey=AKn3dWXm2N9ioAo&amp;em=2&amp;wdAr=1.7777777777777777"
-            width="476px" height="288px" frameborder="0">Este é um apresentação do <a target="_blank"
-                href="https://office.com">Microsoft Office</a> incorporado, da plataforma <a target="_blank"
-                href="https://office.com/webapps">Office</a>.</iframe>
-    </div>
-    <div id="click_1" style="width: 860px;height: 262px;background-color: white;">
-        <iframe id="myIframe_1" class="frame" src="../index.html#tela-1"></iframe>
-    </div>
-    <div id="click_2" style="width: 860px;height: 262px;background-color: white;">
-        <iframe id="myIframe_2" class="frame" src="../index.html#tela-2"></iframe>
-    </div>
-    <div id="click_3" style="width: 860px;height: 262px;background-color: white;">
-        <iframe id="myIframe_3" class="frame" src="../index.html#tela-3"></iframe>
-    </div>
-    <div id="click_4" style="width: 860px;height: 262px;background-color: white;">
-        <iframe id="myIframe_4" class="frame" src="../index.html#tela-4"></iframe>
-    </div>
-
-
+<div style="overflow: scroll;width: 100%;height: 100%; ">
+    <div id="placeholder"></div>
 </div>
-
 <script>
     $(() => {
-
-        $(document).find('[id^=click]').click((elemento) => {
-            console.log(elemento.target.id);
-            console.log($(elemento).find("#myIframe_1"));
+        for (var t = 1; t <= 57; t++) {
+            document.getElementById("placeholder").innerHTML += `<div style="width: 860px;height: 262px; position: relative; border-style: solid;padding: 2px 4px;">
+                    <button id="botao_${t}" style="width: 230px;height: 50px;position: absolute;right: 0;top: 100px;">Copiar</button>
+                    <iframe id="myIframe_${t}" class="frame" src="../index.html#tela-${t}"></iframe>
+                </div>`;
+        }
+        $(document).find('[id^=botao]').click((elemento) => {
+            navigator.clipboard.writeText($(`#myIframe_${elemento.target.id.split("_")[1]}`).contents().find('main').find('#tela').html());
+            console.log($(`#myIframe_${elemento.target.id.split("_")[1]}`).contents().find('main').find('#tela').html());
         })
-
-        // $("#myIframe_1").on('load', () => {
-        //     $('#click_1').click(() => {
-        //         console.log($("#myIframe_1").contents().find('main').find('#tela').html())
-        //         console.log($('#myIframe_1').contents());
-        //     })
-
-        // })
-
     })
 </script>
